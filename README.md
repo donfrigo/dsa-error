@@ -3,7 +3,8 @@ A small repo that illustrates a problem with DSA key parsing.
 
 I have created the DSA keys using the following commands 
 
-```openssl dsaparam -out params.pem 3072
+```
+openssl dsaparam -out params.pem 1024
 openssl gendsa -out key.pem params.pem
 openssl req -new -key key.pem -out req.pem
 openssl x509 -req -in req.pem -signkey key.pem -out certificate.cer
